@@ -1,4 +1,4 @@
-import{r as g,j}from"./index-J8g9Uaa6.js";import{D as w}from"./DeckOverlay-CYtrro9f.js";import{g as A,a as L}from"./MapChapter-DdgYZZr8.js";import{P,a9 as N}from"./mapbox-overlay-BZD5R_aV.js";const b=`layout(std140) uniform tripsUniforms {
+import{r as g,j}from"./index-CwMo5KhP.js";import{D as w}from"./DeckOverlay-CNLQhO0T.js";import{g as A,a as L}from"./MapChapter-DMHanJ4n.js";import{P,a9 as N}from"./mapbox-overlay-BDzZMNgJ.js";const b=`layout(std140) uniform tripsUniforms {
   bool fadeTrail;
   float trailLength;
   float currentTime;

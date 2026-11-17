@@ -1,0 +1,181 @@
+{
+  "version": "0.2.0",
+  "name": "Edge of Ice",
+  "mapView": {
+    "center": [
+      15,
+      78.5
+    ],
+    "zoom": 4.4,
+    "bearing": 0,
+    "pitch": 0
+  },
+  "basemapStyleUrl": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+  "basemapVisible": true,
+  "basemapOpacity": 1,
+  "layers": [
+    {
+      "id": "ice-front-map",
+      "name": "Available monthly fronts",
+      "type": "geojson",
+      "source": {
+        "type": "geojson",
+        "url": "https://aboydnw.github.io/earth-observation-stories/edge-of-ice/assets/ice-front-map.geojson"
+      },
+      "visible": true,
+      "opacity": 0.55,
+      "style": {
+        "fillColor": "#227c8a",
+        "strokeColor": "#227c8a",
+        "circleRadius": 6,
+        "fillOpacity": 0.55
+      },
+      "descriptiveMetadata": {
+        "contact": {
+          "organization": "Pyles et al."
+        },
+        "license": "CC BY 4.0",
+        "attribution": "Pyles et al. (2026), Zenodo v4, CC BY 4.0",
+        "lineage": "Select available Kronebreen fronts from v4 sval_monthly_termini; Reproject EPSG:32633 to WGS84 longitude/latitude (EPSG:4326); retain all vertices; Label actual source months; no missing-front interpolation or geometry morphing",
+        "links": [
+          {
+            "href": "https://zenodo.org/records/22129588",
+            "rel": "source",
+            "title": "Original source"
+          }
+        ]
+      },
+      "capabilities": {
+        "query": true,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "export": true
+      },
+      "metadata": {
+        "earthStoriesAssetId": "ice-front-map",
+        "delivery": "included"
+      }
+    },
+    {
+      "id": "ice-front-first",
+      "name": "January 2015",
+      "type": "geojson",
+      "source": {
+        "type": "geojson",
+        "url": "https://aboydnw.github.io/earth-observation-stories/edge-of-ice/assets/ice-front-first.geojson"
+      },
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "fillColor": "#227c8a",
+        "strokeColor": "#227c8a",
+        "circleRadius": 6,
+        "fillOpacity": 1
+      },
+      "descriptiveMetadata": {
+        "contact": {
+          "organization": "Pyles et al."
+        },
+        "license": "CC BY 4.0",
+        "attribution": "Pyles et al. (2026), Zenodo v4, CC BY 4.0",
+        "lineage": "Select available Kronebreen fronts from v4 sval_monthly_termini; Reproject EPSG:32633 to WGS84 longitude/latitude (EPSG:4326); retain all vertices; Label actual source months; no missing-front interpolation or geometry morphing",
+        "links": [
+          {
+            "href": "https://zenodo.org/records/22129588",
+            "rel": "source",
+            "title": "Original source"
+          }
+        ]
+      },
+      "capabilities": {
+        "query": true,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "export": true
+      },
+      "metadata": {
+        "earthStoriesAssetId": "ice-front-first",
+        "delivery": "included"
+      }
+    },
+    {
+      "id": "ice-front-last",
+      "name": "December 2024",
+      "type": "geojson",
+      "source": {
+        "type": "geojson",
+        "url": "https://aboydnw.github.io/earth-observation-stories/edge-of-ice/assets/ice-front-last.geojson"
+      },
+      "visible": true,
+      "opacity": 1,
+      "style": {
+        "fillColor": "#227c8a",
+        "strokeColor": "#227c8a",
+        "circleRadius": 6,
+        "fillOpacity": 1
+      },
+      "descriptiveMetadata": {
+        "contact": {
+          "organization": "Pyles et al."
+        },
+        "license": "CC BY 4.0",
+        "attribution": "Pyles et al. (2026), Zenodo v4, CC BY 4.0",
+        "lineage": "Select available Kronebreen fronts from v4 sval_monthly_termini; Reproject EPSG:32633 to WGS84 longitude/latitude (EPSG:4326); retain all vertices; Label actual source months; no missing-front interpolation or geometry morphing",
+        "links": [
+          {
+            "href": "https://zenodo.org/records/22129588",
+            "rel": "source",
+            "title": "Original source"
+          }
+        ]
+      },
+      "capabilities": {
+        "query": true,
+        "create": false,
+        "update": false,
+        "delete": false,
+        "export": true
+      },
+      "metadata": {
+        "earthStoriesAssetId": "ice-front-last",
+        "delivery": "included"
+      }
+    }
+  ],
+  "styles": {
+    "ice-front-map": {
+      "fillColor": "#227c8a",
+      "strokeColor": "#227c8a",
+      "circleRadius": 6,
+      "fillOpacity": 0.55
+    },
+    "ice-front-first": {
+      "fillColor": "#227c8a",
+      "strokeColor": "#227c8a",
+      "circleRadius": 6,
+      "fillOpacity": 1
+    },
+    "ice-front-last": {
+      "fillColor": "#227c8a",
+      "strokeColor": "#227c8a",
+      "circleRadius": 6,
+      "fillOpacity": 1
+    }
+  },
+  "interaction": {
+    "identify": [
+      "ice-front-map",
+      "ice-front-first",
+      "ice-front-last"
+    ]
+  },
+  "metadata": {
+    "earthStories": {
+      "buildId": "ff72e5cf536bdcd9",
+      "projectId": "example-edge-of-ice",
+      "publicationUrl": "https://aboydnw.github.io/earth-observation-stories/edge-of-ice/"
+    }
+  }
+}

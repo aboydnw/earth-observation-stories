@@ -30,7 +30,7 @@ Embeddable story: embed.html
 Embed instructions: EMBED.txt
 Archival edition: archival.html
 Link preview text: share/post-text.md
-Build: cd6b899104b69ec2
+Build: ff72e5cf536bdcd9
 Project: edge-of-ice
 Manifest: publication.json
 Report: publication-report.html

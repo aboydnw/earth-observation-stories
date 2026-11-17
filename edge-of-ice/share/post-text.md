@@ -10,7 +10,7 @@ https://aboydnw.github.io/earth-observation-stories/edge-of-ice/
 
 ## With context
 
-A data-backed reading of Kronebreen's monthly record. Front-map exploration is still in development.
+Explore a decade of glacier fronts, and the gaps between them.
 
 Edge of Ice is an interactive story you can scroll through in your browser.
 

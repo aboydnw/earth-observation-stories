@@ -1,4 +1,4 @@
-import{a0 as St,a1 as bt,a2 as wt,L as me,a3 as zt,Z as At,a4 as Tt,a5 as Mt,J as we,p as ze,c as It,a as Ae,U as ct,M as oe,G as xe,I as Z,a6 as Ot,a7 as Et,a8 as Rt,P as Ft,a9 as Bt}from"./mapbox-overlay-BZD5R_aV.js";import{g as kt}from"./index-J8g9Uaa6.js";const ke=`layout(std140) uniform floatColorsUniforms {
+import{a0 as St,a1 as bt,a2 as wt,L as me,a3 as zt,Z as At,a4 as Tt,a5 as Mt,J as we,p as ze,c as It,a as Ae,U as ct,M as oe,G as xe,I as Z,a6 as Ot,a7 as Et,a8 as Rt,P as Ft,a9 as Bt}from"./mapbox-overlay-BDzZMNgJ.js";import{g as kt}from"./index-CwMo5KhP.js";const ke=`layout(std140) uniform floatColorsUniforms {
   float useByteColors;
 } floatColors;
 
