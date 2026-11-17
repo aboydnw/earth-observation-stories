@@ -1,0 +1,301 @@
+{
+  "schema": "earth-stories/publication/v2",
+  "build": {
+    "id": "cd6b899104b69ec2",
+    "projectId": "example-edge-of-ice",
+    "projectDigest": "c42c187c2fa584ea6f362310c57960cbcb22d239d9f7345c56c9fc6464457117",
+    "runtimeVersion": "0.1.0",
+    "dependencyDigests": [
+      {
+        "id": "source:ice-fronts:data",
+        "sha256": "02dfdf86a93bc8fbe280b43a28e44e9590dbaeb7a32718925f6b3fe59fea9553"
+      },
+      {
+        "id": "source:ice-record:data",
+        "sha256": "7c5295e4ae3ecdd52830e26d4477b654837ff42209cc6ad979562259b07085e5"
+      },
+      {
+        "id": "source:ice-table:data",
+        "sha256": "fd7e2ba4f2a2cdc33f2d35468915a01d4178d4d094be58820b02715930080b1b"
+      }
+    ]
+  },
+  "metadata": {
+    "title": "Edge of Ice",
+    "description": "A data-backed reading of Kronebreen's monthly record. Front-map exploration is still in development.",
+    "author": null
+  },
+  "assets": [
+    {
+      "id": "ice-fronts",
+      "label": "Kronebreen: 114 monthly glacier fronts",
+      "kind": "image",
+      "delivery": "included",
+      "href": "assets/ice-fronts.png",
+      "attribution": "Pyles et al. (2026), Zenodo v4, CC BY 4.0; chart by Earth Stories",
+      "provenance": {
+        "publisher": "Pyles et al.",
+        "sourceUrl": "https://zenodo.org/records/22129588",
+        "licenseName": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "dataUpdatedAt": null,
+        "accessedAt": "2026-11-16",
+        "staleAfterDays": null,
+        "temporalCoverage": null,
+        "spatialCoverage": "Kronebreen, Svalbard; RGI60-07.01464",
+        "transformations": [
+          "Select 114 available Kronebreen fronts from v4 GeoPackage sval_monthly_termini",
+          "Plot native EPSG:32633 coordinates in kilometres, with January 2015 and December 2024 highlighted; do not interpolate missing geometries"
+        ]
+      },
+      "sizeBytes": null,
+      "tileType": null,
+      "presentation": {
+        "opacity": 0.85,
+        "color": "#cf3f02",
+        "strokeColor": "#443f3f",
+        "radius": 6,
+        "sourceLayer": null,
+        "rasterBand": 1,
+        "rescale": null,
+        "colormap": "viridis",
+        "colormapReversed": false,
+        "legendTitle": "",
+        "legendVisible": true,
+        "symbolProperty": null,
+        "categoryColors": {},
+        "filterProperty": null,
+        "filterValue": null
+      },
+      "zarr": null,
+      "cog": null,
+      "trajectory": null,
+      "copc": null
+    },
+    {
+      "id": "ice-record",
+      "label": "Kronebreen: monthly rate and coverage",
+      "kind": "image",
+      "delivery": "included",
+      "href": "assets/ice-record.png",
+      "attribution": "Pyles et al. (2026), Zenodo v4, CC BY 4.0; chart by Earth Stories",
+      "provenance": {
+        "publisher": "Pyles et al.",
+        "sourceUrl": "https://zenodo.org/records/22129588",
+        "licenseName": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "dataUpdatedAt": null,
+        "accessedAt": "2026-11-16",
+        "staleAfterDays": null,
+        "temporalCoverage": null,
+        "spatialCoverage": null,
+        "transformations": [
+          "Select RGI60-07.01464 (Kronebreen) from v4 NetCDF",
+          "Plot monthly ablation rates and source uncertainty; retain geometry-gap and interpolation flags; no smoothing"
+        ]
+      },
+      "sizeBytes": null,
+      "tileType": null,
+      "presentation": {
+        "opacity": 0.85,
+        "color": "#cf3f02",
+        "strokeColor": "#443f3f",
+        "radius": 6,
+        "sourceLayer": null,
+        "rasterBand": 1,
+        "rescale": null,
+        "colormap": "viridis",
+        "colormapReversed": false,
+        "legendTitle": "",
+        "legendVisible": true,
+        "symbolProperty": null,
+        "categoryColors": {},
+        "filterProperty": null,
+        "filterValue": null
+      },
+      "zarr": null,
+      "cog": null,
+      "trajectory": null,
+      "copc": null
+    },
+    {
+      "id": "ice-table",
+      "label": "Kronebreen monthly source values",
+      "kind": "csv",
+      "delivery": "included",
+      "href": "assets/ice-table.csv",
+      "attribution": "Pyles et al. (2026), CC BY 4.0",
+      "provenance": {
+        "publisher": "Pyles et al.",
+        "sourceUrl": "https://zenodo.org/records/22129588",
+        "licenseName": "CC BY 4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+        "dataUpdatedAt": null,
+        "accessedAt": "2026-11-16",
+        "staleAfterDays": null,
+        "temporalCoverage": {
+          "start": "2015-02-01",
+          "end": "2024-12-31"
+        },
+        "spatialCoverage": "Kronebreen, Svalbard; RGI60-07.01464",
+        "transformations": [
+          "Subset the named glacier from the v4 NetCDF; preserve source rates, uncertainties, missing-geometry and interpolation flags; no aggregation or smoothing"
+        ]
+      },
+      "sizeBytes": null,
+      "tileType": null,
+      "presentation": {
+        "opacity": 0.85,
+        "color": "#cf3f02",
+        "strokeColor": "#443f3f",
+        "radius": 6,
+        "sourceLayer": null,
+        "rasterBand": 1,
+        "rescale": null,
+        "colormap": "viridis",
+        "colormapReversed": false,
+        "legendTitle": "",
+        "legendVisible": true,
+        "symbolProperty": null,
+        "categoryColors": {},
+        "filterProperty": null,
+        "filterValue": null
+      },
+      "zarr": null,
+      "cog": null,
+      "trajectory": null,
+      "copc": null
+    }
+  ],
+  "chapters": [
+    {
+      "id": "edge-opening",
+      "title": "The boundary between glacier and sea",
+      "narrative": "From a distance, a glacier can seem as permanent as the mountains around it. Follow its edge, where ice meets water, and you are following a boundary that moves.\n\nThis story begins at **Kronebreen in Svalbard**. Its monthly record gives us a way to ask what happens at that boundary, without pretending that one line tells the whole story.\n\n**Data edition:** the chart below uses the researchers' v4 observations and estimates. The monthly-front figure is static; a selectable map is not yet included. Use the chapter navigation to move at your own pace.",
+      "type": "prose"
+    },
+    {
+      "id": "edge-outlines",
+      "title": "An edge with a memory",
+      "narrative": "One line shows a boundary. Let the other months gather around it, and the boundary becomes a record. These are the 114 available monthly fronts for Kronebreen in the source GeoPackage. The 6 absent months stay absent.\n\nThe lines mark the ice front, not a coastline or the glacier's complete outline. Their coordinate grid makes this a comparison of position, not a photographic view. A selectable two-date map remains future work.\n\n### Reading the figure\n\n- **Gold:** January 2015 front. **White:** December 2024 front. The other lines are available monthly fronts, not a continuous animation.\n- **Horizontal axis:** easting in kilometres, UTM zone 33N. **Vertical axis:** northing in kilometres.\n- Missing months have no line. Open the figure, then choose **Open original image** to inspect its labels at full resolution.",
+      "type": "image",
+      "assetId": "ice-fronts",
+      "alt": "114 available monthly glacier front outlines for Kronebreen, January 2015 through December 2024, plotted in UTM coordinates. January 2015 is gold and December 2024 is white. Missing months have no outline.",
+      "caption": "Model-derived monthly average fronts from Sentinel-1 radar, not daily observations or a reconstruction of individual calving events."
+    },
+    {
+      "id": "edge-record",
+      "title": "A record with visible gaps",
+      "narrative": "One outline shows a place; another gives it a memory. The researchers also estimated the rate of ice loss at the front. Each point here belongs to a monthly interval, and each vertical bar preserves the uncertainty supplied with it.\n\nThe amber points deserve a second look. Their frontal area change bridges gaps in the geometry record. An estimated change is not a newly observed edge.\n\n### Reading the chart\n\n- **Horizontal axis:** monthly intervals from February 2015 to December 2024. **Vertical axis:** frontal ablation rate in gigatonnes per year, not monthly totals. Negative values indicate mass loss.\n- **Teal circles:** intervals without interpolated area change. **Amber diamonds:** area change estimated across a geometry gap.\n- **Vertical bars:** source-reported uncertainty, not confidence intervals. No line joins the points.\n- **Coverage strip:** teal ticks mean geometry is available; amber ticks mean geometry is missing. Geometry availability and interpolation are separate flags.\n\nOpen the figure, then choose **Open original image** for the full-resolution plot. The editable project also includes the source-value CSV; this page does not yet provide an interactive data table.",
+      "type": "image",
+      "assetId": "ice-record",
+      "alt": "Kronebreen monthly frontal ablation estimates, February 2015 to December 2024, with source uncertainty bars. Amber diamonds identify interpolated area-change intervals; amber ticks identify missing geometry. No line connects the points.",
+      "caption": "Rates are expressed in gigatonnes per year, sampled at monthly intervals. They are not monthly totals. The study's sign convention is retained: negative values indicate mass loss. Source-reported uncertainties are not relabeled as confidence intervals."
+    },
+    {
+      "id": "edge-boundary",
+      "title": "A moving edge is not a balance sheet",
+      "narrative": "A glacier can flow toward the sea while its front retreats. Estimating frontal ablation requires more than comparing outlines: the researchers also combine ice movement, thickness and modeled surface mass balance.\n\n**Frontal ablation is not total glacier mass loss.** This chart describes the front, not the glacier's complete mass balance. It cannot tell us how an individual piece of ice broke away or reconstruct a particular day's weather.",
+      "type": "prose"
+    },
+    {
+      "id": "edge-gaps",
+      "title": "Let the gaps remain visible",
+      "narrative": "Kronebreen's file contains 119 monthly intervals, from February 2015 through December 2024. The geometry and interpolation flags answer different questions: was an outline available, and did the area-change estimate bridge a gap? An interval can have geometry and still use interpolated change.\n\nThe chart keeps those distinctions. It does not draw imagined outlines for missing months or smooth the estimates into continuous motion. The editable project includes the underlying CSV, including both flags.",
+      "type": "prose"
+    },
+    {
+      "id": "edge-explore",
+      "title": "Follow your own question",
+      "narrative": "Return to a month that caught your eye. Was its geometry available? Was its change estimated across a gap?\n\nThe planned **Svalbard Front Explorer** will keep those questions beside the map: two-date comparison, a coverage strip, and a separate uncertainty panel. It is not a live feature in this edition.\n\nRead the [dataset and downloadable files](https://zenodo.org/records/22129588) or the [published study](https://essd.copernicus.org/articles/18/7319/2026/). Pyles and colleagues' v4 dataset is licensed CC BY 4.0. This edition selects one glacier; it makes no claim that its behavior represents all of Svalbard.",
+      "type": "prose"
+    }
+  ],
+  "externalDependencies": [
+    {
+      "resourceId": "carto-positron",
+      "href": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    }
+  ],
+  "hostingRequirements": [
+    "static-http"
+  ],
+  "continuations": [],
+  "publication": {
+    "profile": "connected",
+    "theme": "editorial"
+  },
+  "basemap": {
+    "delivery": "connected",
+    "id": "carto-positron",
+    "label": "CARTO Positron",
+    "styleUrl": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+    "attribution": "© OpenStreetMap contributors © CARTO"
+  },
+  "connectivity": {
+    "requested": "connected",
+    "state": "pending"
+  },
+  "dependencies": [
+    {
+      "id": "basemap:carto-positron:style",
+      "owner": {
+        "type": "basemap",
+        "id": "carto-positron"
+      },
+      "locator": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "estimatedBytes": null,
+      "delivery": "connected",
+      "materialization": "none",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    },
+    {
+      "id": "source:ice-fronts:data",
+      "owner": {
+        "type": "source",
+        "id": "ice-fronts"
+      },
+      "locator": "assets/ice-fronts.png",
+      "estimatedBytes": null,
+      "delivery": "included",
+      "materialization": "copy-local",
+      "requirements": [],
+      "sha256": "02dfdf86a93bc8fbe280b43a28e44e9590dbaeb7a32718925f6b3fe59fea9553"
+    },
+    {
+      "id": "source:ice-record:data",
+      "owner": {
+        "type": "source",
+        "id": "ice-record"
+      },
+      "locator": "assets/ice-record.png",
+      "estimatedBytes": null,
+      "delivery": "included",
+      "materialization": "copy-local",
+      "requirements": [],
+      "sha256": "7c5295e4ae3ecdd52830e26d4477b654837ff42209cc6ad979562259b07085e5"
+    },
+    {
+      "id": "source:ice-table:data",
+      "owner": {
+        "type": "source",
+        "id": "ice-table"
+      },
+      "locator": "assets/ice-table.csv",
+      "estimatedBytes": null,
+      "delivery": "included",
+      "materialization": "copy-local",
+      "requirements": [],
+      "sha256": "fd7e2ba4f2a2cdc33f2d35468915a01d4178d4d094be58820b02715930080b1b"
+    }
+  ],
+  "projectionDefinitions": [],
+  "runtimeAssets": []
+}

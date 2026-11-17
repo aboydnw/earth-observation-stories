@@ -1,0 +1,5 @@
+A Place, Rewritten · editorial prototype
+
+Deploy every file in this folder first. Replace {{PUBLICATION_URL}} with the public URL of that folder, then paste the iframe into your website.
+
+<iframe src="{{PUBLICATION_URL}}/embed.html" style="width:100%;height:100vh;min-height:500px;border:0" height="700" title="A Place, Rewritten · editorial prototype" loading="lazy" allowfullscreen></iframe>

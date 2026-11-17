@@ -1,0 +1,163 @@
+{
+  "schema": "earth-stories/publication/v2",
+  "build": {
+    "id": "d2e9896cfa73e85b",
+    "projectId": "example-a-place-rewritten",
+    "projectDigest": "4b53945e47477cd6b854fb6e6f49048af94a4e8996b0fb5fe098f13b1f740ce4",
+    "runtimeVersion": "0.1.0",
+    "dependencyDigests": [
+      {
+        "id": "source:ecosystem-concept:data",
+        "sha256": "966e06ce8e19d0b2953d0e7afbaed0a7f6a93f3f57426558f6b5df29693dc52a"
+      }
+    ]
+  },
+  "metadata": {
+    "title": "A Place, Rewritten · editorial prototype",
+    "description": "What changes when a landscape keeps its name? Conceptual narrative; annual ecosystem data are not connected yet.",
+    "author": null
+  },
+  "assets": [
+    {
+      "id": "ecosystem-concept",
+      "label": "Conceptual parts of a landscape",
+      "kind": "image",
+      "delivery": "included",
+      "href": "assets/ecosystem-concept.png",
+      "attribution": "Earth Stories original editorial diagram; not observations",
+      "provenance": {
+        "publisher": "Earth Stories",
+        "sourceUrl": "https://github.com/aboydnw/earth-stories",
+        "licenseName": "MIT",
+        "licenseUrl": "https://github.com/aboydnw/earth-stories/blob/main/LICENSE",
+        "dataUpdatedAt": null,
+        "accessedAt": "2026-11-16",
+        "staleAfterDays": null,
+        "temporalCoverage": null,
+        "spatialCoverage": null,
+        "transformations": [
+          "Original conceptual illustration, not geospatial data; equal panels do not encode area or probabilities"
+        ]
+      },
+      "sizeBytes": null,
+      "tileType": null,
+      "presentation": {
+        "opacity": 0.85,
+        "color": "#cf3f02",
+        "strokeColor": "#443f3f",
+        "radius": 6,
+        "sourceLayer": null,
+        "rasterBand": 1,
+        "rescale": null,
+        "colormap": "viridis",
+        "colormapReversed": false,
+        "legendTitle": "",
+        "legendVisible": true,
+        "symbolProperty": null,
+        "categoryColors": {},
+        "filterProperty": null,
+        "filterValue": null
+      },
+      "zarr": null,
+      "cog": null,
+      "trajectory": null,
+      "copc": null
+    }
+  ],
+  "chapters": [
+    {
+      "id": "place-opening",
+      "title": "A familiar place",
+      "narrative": "A familiar place can feel permanent. We give it a name, remember its outline, and return expecting to recognize it. What makes it feel like itself?\n\n**Editorial prototype, not a measured local history.** No landscape has been selected and no annual ecosystem values have been imported. This is a readable story treatment for the data experience we want to build.",
+      "type": "prose"
+    },
+    {
+      "id": "place-composition",
+      "title": "One place, many parts",
+      "narrative": "At the scale of a kilometre, one square can contain more than one ecosystem. A single color can conceal that mixture.\n\nThe intended story will open the square into its measured parts, then return them to the whole landscape. This illustration explains that idea, but it does not substitute invented fractions for data.",
+      "type": "image",
+      "assetId": "ecosystem-concept",
+      "alt": "Six equal colored panels illustrate possible landscape components. This is not the dataset's complete typology, a map, or measured ecosystem fractions.",
+      "caption": "Original conceptual illustration. Panel sizes and positions do not encode observed fractions or sub-pixel geography."
+    },
+    {
+      "id": "place-record",
+      "title": "A record through time",
+      "narrative": "The proposed evidence spans **1982 to 2024**. Researchers combined land-cover information, climate regions and landforms to map terrestrial ecosystem functional groups through time.\n\nThe accompanying paper is a **preprint under review**. Its mapped fractions do not measure species abundance or ecological health, and a one-kilometre product cannot establish the history of an individual parcel.",
+      "type": "prose"
+    },
+    {
+      "id": "place-question",
+      "title": "A change is the beginning of a question",
+      "narrative": "A changing map can tell us where to look more closely. It cannot explain a cause by itself.\n\nTo tell a particular landscape's story, we will need historical imagery, local research and land-use records. Small shifts also need scrutiny: changes in classification or noisy estimates must not become confident claims about what happened on the ground.",
+      "type": "prose"
+    },
+    {
+      "id": "place-explore",
+      "title": "Choose your own route",
+      "narrative": "The proposed **Ecosystem Time Machine** will compare two years, inspect cell or regional fractions, and preserve the selected place in shareable views. It is not available in this prototype.\n\nThe [dataset record](https://doi.org/10.5281/zenodo.19448555) is CC BY 4.0 and distributes access instructions for Google Earth Engine collections, not downloadable global raster files. A verified regional export is needed before a local-first Earth Stories edition can show these maps.\n\nRead [Du and colleagues' preprint](https://essd.copernicus.org/preprints/essd-2026-791/). Before connecting the data we will validate its class order, fraction scale, missing-data handling and comparable annual coverage. No causal interpretation or local change is claimed in this draft.",
+      "type": "prose"
+    }
+  ],
+  "externalDependencies": [
+    {
+      "resourceId": "carto-positron",
+      "href": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    }
+  ],
+  "hostingRequirements": [
+    "static-http"
+  ],
+  "continuations": [],
+  "publication": {
+    "profile": "connected",
+    "theme": "editorial"
+  },
+  "basemap": {
+    "delivery": "connected",
+    "id": "carto-positron",
+    "label": "CARTO Positron",
+    "styleUrl": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+    "attribution": "© OpenStreetMap contributors © CARTO"
+  },
+  "connectivity": {
+    "requested": "connected",
+    "state": "pending"
+  },
+  "dependencies": [
+    {
+      "id": "basemap:carto-positron:style",
+      "owner": {
+        "type": "basemap",
+        "id": "carto-positron"
+      },
+      "locator": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "estimatedBytes": null,
+      "delivery": "connected",
+      "materialization": "none",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    },
+    {
+      "id": "source:ecosystem-concept:data",
+      "owner": {
+        "type": "source",
+        "id": "ecosystem-concept"
+      },
+      "locator": "assets/ecosystem-concept.png",
+      "estimatedBytes": null,
+      "delivery": "included",
+      "materialization": "copy-local",
+      "requirements": [],
+      "sha256": "966e06ce8e19d0b2953d0e7afbaed0a7f6a93f3f57426558f6b5df29693dc52a"
+    }
+  ],
+  "projectionDefinitions": [],
+  "runtimeAssets": []
+}

@@ -1,0 +1,163 @@
+{
+  "schema": "earth-stories/publication/v2",
+  "build": {
+    "id": "9385c40a7311661b",
+    "projectId": "example-beyond-tree-cover",
+    "projectDigest": "70502ba6c89de1c90917107bde0e0c43bd9de8efac0f1a0e1fd59811c384da25",
+    "runtimeVersion": "0.1.0",
+    "dependencyDigests": [
+      {
+        "id": "source:forest-concept:data",
+        "sha256": "1ebddaeab1ef3e094c8ec6c62689e0e1b0ca32a3ba5226fd4a6de13807263456"
+      }
+    ]
+  },
+  "metadata": {
+    "title": "Beyond Tree Cover · editorial prototype",
+    "description": "What a green map leaves out. Illustrated narrative draft; no ForTy data layer is connected yet.",
+    "author": null
+  },
+  "assets": [
+    {
+      "id": "forest-concept",
+      "label": "Six categories: conceptual key, not a map",
+      "kind": "image",
+      "delivery": "included",
+      "href": "assets/forest-concept.png",
+      "attribution": "Earth Stories original editorial diagram; not observations",
+      "provenance": {
+        "publisher": "Earth Stories",
+        "sourceUrl": "https://github.com/aboydnw/earth-stories",
+        "licenseName": "MIT",
+        "licenseUrl": "https://github.com/aboydnw/earth-stories/blob/main/LICENSE",
+        "dataUpdatedAt": null,
+        "accessedAt": "2026-11-16",
+        "staleAfterDays": null,
+        "temporalCoverage": null,
+        "spatialCoverage": null,
+        "transformations": [
+          "Original conceptual illustration, not geospatial data; equal panels do not encode area or probabilities"
+        ]
+      },
+      "sizeBytes": null,
+      "tileType": null,
+      "presentation": {
+        "opacity": 0.85,
+        "color": "#cf3f02",
+        "strokeColor": "#443f3f",
+        "radius": 6,
+        "sourceLayer": null,
+        "rasterBand": 1,
+        "rescale": null,
+        "colormap": "viridis",
+        "colormapReversed": false,
+        "legendTitle": "",
+        "legendVisible": true,
+        "symbolProperty": null,
+        "categoryColors": {},
+        "filterProperty": null,
+        "filterValue": null
+      },
+      "zarr": null,
+      "cog": null,
+      "trajectory": null,
+      "copc": null
+    }
+  ],
+  "chapters": [
+    {
+      "id": "forest-opening",
+      "title": "What a green map leaves out",
+      "narrative": "Before adding a legend, imagine looking across a wooded landscape. Follow the edge of a clearing, the repeated shapes of trees, the places where canopy gives way to something else. 'Forest' might seem a reasonable place to start.\n\n**Editorial prototype, not a data exploration.** These chapters establish the story and its visual language. No local forest classification or satellite imagery has been loaded, and the illustration is not a measured place.",
+      "type": "prose"
+    },
+    {
+      "id": "forest-key",
+      "title": "The green divides",
+      "narrative": "Similar colors from above can hold different histories: forests that regenerated naturally, planted forests, intensively managed plantations, and agricultural landscapes where trees produce crops.\n\nForTy distinguishes six classes for the year 2020. Its distinction between planted and plantation forest uses a rotation-period proxy; management history is not directly visible from space.",
+      "type": "image",
+      "assetId": "forest-concept",
+      "alt": "Six equally sized colored panels label the ForTy categories. Their sizes do not represent land area or model scores.",
+      "caption": "Conceptual key only. Equal panels are a layout choice, not a distribution of forest types."
+    },
+    {
+      "id": "forest-confidence",
+      "title": "A clear edge can hide a question",
+      "narrative": "A colored boundary can look decisive. But different kinds of tree cover can look remarkably alike. A future view will let you inspect the competing class scores instead of showing only the winning color.\n\nThose scores are **not calibrated probabilities of being correct**. They cannot settle the history of a particular place, establish legal compliance, or tell us whether a forest is healthy. Local records and people who know the land remain part of the evidence.",
+      "type": "prose"
+    },
+    {
+      "id": "forest-time",
+      "title": "Keep the year in view",
+      "narrative": "This dataset describes **2020**, not the landscape today. A recent photograph beside it could quietly imply a comparison the data cannot support.\n\nBefore this story becomes a mapped case study, it needs a verified regional subset, matching imagery dates, checked nodata handling and a documented local context. Until then, there is no before-and-after claim to make.",
+      "type": "prose"
+    },
+    {
+      "id": "forest-explore",
+      "title": "What would you ask on the ground?",
+      "narrative": "The proposed **Forest Lens** companion will reveal imagery and classification over the same area, retain the source year, and expose competing scores when you select a location. It has not been built into this prototype.\n\n[ForTy source data](https://doi.org/10.25452/figshare.plus.32288616) are five-band, 10-metre COGs distributed in UTM archives, under CC BY 4.0. [Producer documentation](https://developers.google.com/earth-engine/datasets/catalog/projects_nature-trace_assets_forest_typology_forest_typology_2020_v1_0_collection) explains classes and limitations. The source scores are stored from 0 to 250; the sixth class is the complement of the other five. A data pipeline must validate those values and nodata before deriving colors.\n\nOur next editorial step is to select a real, independently documented landscape, not manufacture a case study from an attractive color pattern.",
+      "type": "prose"
+    }
+  ],
+  "externalDependencies": [
+    {
+      "resourceId": "carto-positron",
+      "href": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    }
+  ],
+  "hostingRequirements": [
+    "static-http"
+  ],
+  "continuations": [],
+  "publication": {
+    "profile": "connected",
+    "theme": "editorial"
+  },
+  "basemap": {
+    "delivery": "connected",
+    "id": "carto-positron",
+    "label": "CARTO Positron",
+    "styleUrl": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+    "attribution": "© OpenStreetMap contributors © CARTO"
+  },
+  "connectivity": {
+    "requested": "connected",
+    "state": "pending"
+  },
+  "dependencies": [
+    {
+      "id": "basemap:carto-positron:style",
+      "owner": {
+        "type": "basemap",
+        "id": "carto-positron"
+      },
+      "locator": "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json",
+      "estimatedBytes": null,
+      "delivery": "connected",
+      "materialization": "none",
+      "requirements": [
+        "network",
+        "cors"
+      ]
+    },
+    {
+      "id": "source:forest-concept:data",
+      "owner": {
+        "type": "source",
+        "id": "forest-concept"
+      },
+      "locator": "assets/forest-concept.png",
+      "estimatedBytes": null,
+      "delivery": "included",
+      "materialization": "copy-local",
+      "requirements": [],
+      "sha256": "1ebddaeab1ef3e094c8ec6c62689e0e1b0ca32a3ba5226fd4a6de13807263456"
+    }
+  ],
+  "projectionDefinitions": [],
+  "runtimeAssets": []
+}
